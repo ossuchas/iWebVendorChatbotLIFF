@@ -1,0 +1,30 @@
+mat-form-field{
+  width: 100%;
+}
+
+mat-card-header{
+  // background: #921c1e;
+  background: black;
+  padding: 5px;
+  color:white;
+}
+
+mat-card-content{
+  padding: 10px;
+}
+
+mat-card{
+  margin: 5px;
+  padding:0;
+}
+
+.example-button-row{
+  margin: 15px;
+  // position: absolute; right: 0;
+  // margin-right: 50%;
+}
+
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
