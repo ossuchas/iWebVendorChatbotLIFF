@@ -15,13 +15,15 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { RequestBillingComponent } from './request-billing/request-billing.component';
 
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { PoidlistComponent } from './poidlist/poidlist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RequestGRComponent,
     PageNotFoundComponent,
-    RequestBillingComponent
+    RequestBillingComponent,
+    PoidlistComponent
   ],
   imports: [
     BrowserModule,
