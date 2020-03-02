@@ -1,4 +1,20 @@
-<p>poidlist works!</p>
-<div class="example-button-row">
-  <button mat-raised-button color="primary" (click)="sendMessages()">Submit</button>
+<!-- <p>poidlist works!</p> -->
+<div class="container" offset-md="2">
+  <div>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>:: List of PO Number ::</mat-card-title>
+      </mat-card-header><br>
+      <mat-form-field appearance="fill" class="container">
+        <mat-label>PO Number</mat-label>
+        <input matInput name="poid" [(ngModel)]="poid">
+        <!-- <input matInput> -->
+        <!-- <input matInput placeholder="Username" name="username" [(ngModel)]="username"> -->
+      </mat-form-field>
+      <div class="example-button-row">
+        <!-- <button mat-raised-button color="primary">Upload</button> -->
+        <button mat-raised-button color="primary" (click)="sendMessages()">Submit</button>
+      </div><br>
+    </mat-card>
+  </div>
 </div>

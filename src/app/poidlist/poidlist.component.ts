@@ -14,12 +14,15 @@ export class PoidlistComponent implements OnInit {
   messages: string;
   email: string;
 
+  poid: string;
+
   constructor(
     private liffService: LiffappService,
   ) {
     this.messages = '';
     this.email = '';
     this.userProfile = '';
+    this.poid = '';
   }
 
   async ngOnInit() {
@@ -38,19 +41,12 @@ export class PoidlistComponent implements OnInit {
   }
 
   async sendMessages() {
-      // this.userProfile = await liff.getProfile();
+      this.userProfile = await liff.getProfile();
       const accessToken = liff.getAccessToken();
-      liff.getProfile().then(profile => {
-        const userProfile = profile.userId;
-        const displayName = profile.displayName;
-        const statusMessage = profile.statusMessage;
-        const pictureUrl = profile.pictureUrl;
-        const email = liff.getDecodedIDToken().email;
-      }).catch(
-        err => console.error(err)
-      );
 
-      this.messages = liff.getOS() + ', ' + accessToken;
+      // this.messages = dataProfile + ',' + this.userProfile.displayName
+      // + ', ' + this.userProfile.userId + ', ' + liff.getOS() + ', ' + accessToken;
+      this.messages = this.poid;
       try {
         const successMsgs = await liff.sendMessages([{
           type: 'text',
